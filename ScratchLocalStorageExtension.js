@@ -5,7 +5,7 @@ new (function() {
     var ext = this;
 
     ext.set_localstorage = function (data) {
-        localStorage.setItem(app.projectModel.id.toString(), data);
+        localStorage.setItem("ls1", data);
     };
 
     ext.change_localstorage = function(change) {
@@ -16,8 +16,8 @@ new (function() {
     };
 
     ext.get_localstorage = function () {
-        /*return app.projectModel.id.toString() + localStorage.getItem(app.projectModel.id.toString());*/
-        return "abc";
+        return localStorage.getItem("ls1");
+        /*return "abc";*/
     };
 
     ext._shutdown = function() {};
