@@ -9,9 +9,9 @@ new (function() {
     };
 
     ext.change_localstorage = function(change) {
-        var data = localStorage.getItem(app.projectModel.id.toString());
+        var data = localStorage.getItem("ls1");
         if (!isNaN(parseFloat(data))) {
-             localStorage.setItem(app.projectModel.id.toString(), parseFloat(data) + change);
+             localStorage.setItem("ls1", parseFloat(data) + change);
         }
     };
 
