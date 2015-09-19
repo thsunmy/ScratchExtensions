@@ -16,7 +16,8 @@ new (function() {
     };
 
     ext.get_localstorage = function () {
-        return app.projectModel.id.toString() + localStorage.getItem(app.projectModel.id.toString());
+        'return app.projectModel.id.toString() + localStorage.getItem(app.projectModel.id.toString());
+        return "abc";
     };
 
     ext._shutdown = function() {};
