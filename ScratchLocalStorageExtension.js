@@ -10,7 +10,7 @@ new (function() {
 
     ext.change_localstorage = function(change) {
         var data = localStorage.getItem("ls1");
-        change += 1;
+        change = parseFloat(change) + 1;
         if (!isNaN(parseFloat(data))) {
              localStorage.setItem("ls1", change);
         }
