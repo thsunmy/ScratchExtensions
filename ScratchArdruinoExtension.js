@@ -437,6 +437,12 @@
       hw.val = 0;
     }
   };
+
+  ext.getDigitalLED = function (led) {
+      var hw = hwList.search(led);
+
+      return hw.val;
+  };
   
   ext.readInput = function(name) {
     var hw = hwList.search(name);
@@ -558,6 +564,7 @@
       ['-'],
       ['h', 'when %m.hwIn %m.ops %n%', 'whenInput', 'rotation knob', '>', 50],
       ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
+      ['r', 'get %m.leds', 'getDigitalLED', 'led A'], 
       ['-'],
       [' ', 'set pin %n %m.outputs', 'digitalWrite', 1, 'on'],
       [' ', 'set pin %n to %n%', 'analogWrite', 3, 100],
