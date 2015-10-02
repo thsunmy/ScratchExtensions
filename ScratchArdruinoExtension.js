@@ -445,9 +445,17 @@
   };
 
   ext.setPIR = function () {
-      pinMode(8, INPUT);
-      pinMode(7, OUTPUT);
-      digitalWrite(8, HIGH);
+      pinMode(7, INPUT);
+      pinMode(8, OUTPUT);
+      
+      if (digitalRead(7) == LOW) {
+          digitalWrite(8, LOW);  //the led visualizes the sensors output pin state
+      }
+
+      if (digitalRead(7) == HIGH) {
+          digitalWrite(8, HIGH);   //the led visualizes the sensors output pin state
+      }
+
   };
   
   ext.readInput = function(name) {
