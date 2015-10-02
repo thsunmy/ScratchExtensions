@@ -443,6 +443,12 @@
 
       return hw.val;
   };
+
+  ext.setPIR = function () {
+      pinMode(8, INPUT);
+      pinMode(7, OUTPUT);
+      digitalWrite(8, LOW);
+  };
   
   ext.readInput = function(name) {
     var hw = hwList.search(name);
@@ -566,6 +572,7 @@
       ['r', 'read %m.hwIn', 'readInput', 'rotation knob'],
       ['r', 'get %m.leds', 'getDigitalLED', 'led A'], 
       ['-'],
+      [' ', 'set PIR', 'setPIR'],
       [' ', 'set pin %n %m.outputs', 'digitalWrite', 1, 'on'],
       [' ', 'set pin %n to %n%', 'analogWrite', 3, 100],
       ['-'],
