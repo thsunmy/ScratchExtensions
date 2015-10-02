@@ -447,7 +447,7 @@
   ext.setPIR = function () {
       pinMode(8, INPUT);
       pinMode(7, OUTPUT);
-      digitalWrite(8, LOW);
+      digitalWrite(8, HIGH);
   };
   
   ext.readInput = function(name) {
